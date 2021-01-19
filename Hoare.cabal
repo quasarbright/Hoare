@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 61cfc3f92120bdcc76ce8ff0c3abfdfe9abe44f4f6b3e7125211422ce748cac8
+-- hash: ffc5f68daaa302a64b5309844363660c875c14c2e50cf7be0e8d0b796aae9fc2
 
 name:           Hoare
 version:        0.1.0.0
@@ -27,7 +27,8 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      AST
+      VC
   other-modules:
       Paths_Hoare
   hs-source-dirs:
@@ -68,7 +69,7 @@ test-suite Hoare-test
   hs-source-dirs:
       test
   default-extensions: LambdaCase RecordWildCards GeneralizedNewtypeDeriving TupleSections MonadComprehensions MultiWayIf
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -w -Wall
   build-depends:
       HUnit
     , Hoare

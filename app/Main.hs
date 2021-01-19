@@ -1,6 +1,7 @@
 module Main where
 
-import Lib
+import AST
+import VC
 
 main :: IO ()
-main = someFunc
+main = putStrLn "hello"
